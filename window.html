@@ -1,8 +1,34 @@
 <!DOCTYPE html>
+<!-- The window.html file is the UI for the app -->
 <html>
 	<head>
+		<script src="js/setCount.js"></script>>
 	</head>
 	<body>
-		<div> Hello world!</div>
+		<div>
+		Rows to Count: <input type="text" id="maxRows" name="maxRows"><br>
+		Current Row: <input type="text" id="currentRow" name="currentRow"><br>
+		Stitches per row: <input type="text" id="maxStitches" name="maxStitches"><br>
+		</div>
+		<div>
+			Input<br>
+				Number of Rows to Count: 
+				<input type="text" id="numRows" name="numRows"><br>
+				Number of Stitches: 
+				<input type="text" name="numStitches"><br>
+				<br><br>
+		</div>
+		<div>
+				<button type="button" id="submit" name="Ready">Set Upper Counters<br>
+				<button type="button" id="resetCounters" name="ResetCounters">Reset Counters<br>
+				<button type="button" id="nextRow" name="NextRow">NextRow<br>
+		</div>
+		
+		<dialog id="alert">
+			<input type="text" id="notice"><br>
+			<button>Cancel</button>
+			<button>Confirm</button>
+		</dialog>
+
 	</body>
 </html>

@@ -1,33 +1,68 @@
 <!DOCTYPE html>
-<!-- The window.html file is the UI for the app -->
+<!-- The window.html file is the UI for the app --!>
 <html>
 	<head>
-		<script src="js/setCount.js"></script>>
+		<script src="js/setCount.js"></script>
+	<style> 
+		form {display: table; }
+		p    {display: table-row; }
+		label {display: table-cell; }
+		input { display: table-cell; }
+	</style>
+
 	</head>
 	<body>
 		<div>
-		Rows to Count: <input type="text" id="maxRows" name="maxRows"><br>
-		Current Row: <input type="text" id="currentRow" name="currentRow"><br>
-		Stitches per row: <input type="text" id="maxStitches" name="maxStitches"><br>
+		<form>
+			Please Input
+			<p>
+			<label> Number of Rows to Count: </label>
+			<input type="number" id="numRows" name="numRows">
+			</p>
+			<p>
+			<label>Number of Stitches: </label>
+			<input type="number" id="numStitches">
+			</p>
+		</form>
 		</div>
+		<br><br>
 		<div>
-			Input<br>
-				Number of Rows to Count: 
-				<input type="text" id="numRows" name="numRows"><br>
-				Number of Stitches: 
-				<input type="text" name="numStitches"><br>
-				<br><br>
+			<button type="button" id="submit" name="Ready">Set Upper Counters<br>
+			<button type="button" id="resetCounters" name="ResetCounters">Reset Counters<br>
+			<button type="button" id="nextRow" name="NextRow">NextRow<br>
 		</div>
+
+		<br><br>
+	
+		<!-- Status -->
 		<div>
-				<button type="button" id="submit" name="Ready">Set Upper Counters<br>
-				<button type="button" id="resetCounters" name="ResetCounters">Reset Counters<br>
-				<button type="button" id="nextRow" name="NextRow">NextRow<br>
+			Your progress<br><br>
+			<p>
+				<label>Rows to Count: </label>
+				<output id="maxRows"></output><br>
+			</p>
+			<p>
+				<label>Stitches per row: </label>
+				<output id="maxStitches"></output><br>
+			</p>
+			<br><br>
+			<p>
+				<label>Current Row: </label>
+				<output id="currentRow"></output><br>
+			</p>
+			<p>
+				<label>Total number of stitches: </label>
+				<output id="currentNumStitches"></output><br>
+			</p>
 		</div>
-		
+
+
+
+		<!-- Pop-up Boxes -->
+		<div>
 		<dialog id="alert">
-			<input type="text" id="notice"><br>
-			<button>Cancel</button>
-			<button>Confirm</button>
+			<output type="text" id="notice"></output><br>
+			<button type="button" id="okAndClose">Ok!</button>
 		</dialog>
 
 	</body>
